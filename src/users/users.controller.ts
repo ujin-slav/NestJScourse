@@ -12,6 +12,7 @@ export class UsersController {
     @ApiOperation({summary: 'Создание пользователя'})
     @Post()
     create(@Body() userDto:CreateUserDto){
+        console.log(userDto)
         return this.userService.createUser(userDto)
     }
 
